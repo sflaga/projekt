@@ -32,8 +32,4 @@ Więcej informacji na temat funkcjonalności aplikacji, struktury bazy danych, i
 
 ## Autor
 
-Autor: Flaga
-
-## Licencja
-
-Ten projekt jest udostępniony na licencji MIT. Szczegółowe informacje można znaleźć w pliku [LICENSE](LICENSE).
+Autor: Flaga Kierepka Mucha
