@@ -1,49 +1,24 @@
 import sqlite3
 
 class Database:
-    def __init__(self, db_name):
-        self.connection = sqlite3.connect(db_name)
+    def __init__(self):
+        self.connection = sqlite3.connect("database.db")
         self.cursor = self.connection.cursor()
+        self.create_tables()
 
-    def create_table(self, table_name, columns):
-        # Tworzenie tabeli
-        query = f"CREATE TABLE IF NOT EXISTS {table_name} ({columns})"
+    def create_tables(self):
+        self.cursor.execute("CREATE TABLE IF NOT EXISTS Users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age INTEGER)")
+        self.cursor.execute("CREATE TABLE IF NOT EXISTS Products (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, price REAL)")
+
+    def insert_record(self, record):
+        table_name, values = record
+        query = f"INSERT INTO {table_name} VALUES (NULL, {values})"
         self.cursor.execute(query)
         self.connection.commit()
-
-    def insert_record(self, table_name, values):
-        # Dodawanie nowego rekordu do tabeli
-        query = f"INSERT INTO {table_name} VALUES ({values})"
-        self.cursor.execute(query)
-        self.connection.commit()
-
-    def update_record(self, table_name, record_id, new_values):
-        # Aktualizowanie istniejącego rekordu w tabeli
-        query = f"UPDATE {table_name} SET {new_values} WHERE id = {record_id}"
-        self.cursor.execute(query)
-        self.connection.commit()
-
-    def delete_record(self, table_name, record_id):
-        # Usuwanie rekordu z tabeli
-        query = f"DELETE FROM {table_name} WHERE id = {record_id}"
-        self.cursor.execute(query)
-        self.connection.commit()
-
-    def select_records(self, table_name):
-        # Pobieranie wszystkich rekordów z tabeli
-        query = f"SELECT * FROM {table_name}"
-        self.cursor.execute(query)
-        records = self.cursor.fetchall()
-        return records
-
-    def search_records(self, table_name, condition):
-        # Wyszukiwanie rekordów spełniających określone warunki
-        query = f"SELECT * FROM {table_name} WHERE {condition}"
-        self.cursor.execute(query)
-        records = self.cursor.fetchall()
-        return records
 
     def close(self):
-        # Zamknięcie połączenia z bazą danych
         self.connection.close()
 
+
+if __name__ == "__main__":
+    database = Database()
