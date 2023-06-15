@@ -28,7 +28,7 @@ Aplikacja bazodanowa umożliwia dodawanie i zarządzanie rekordami w bazie danyc
 
 ## Dokumentacja
 
-Więcej informacji na temat funkcjonalności aplikacji, struktury bazy danych, instrukcji użytkowania i innych szczegółów można znaleźć w [dokumentacji projektu](docs/project_documentation.pdf).
+Więcej informacji na temat funkcjonalności aplikacji, struktury bazy danych, instrukcji użytkowania i innych szczegółów można znaleźć w [dokumentacji projektu](/project_documentation.pdf).
 
 ## Autor
 
