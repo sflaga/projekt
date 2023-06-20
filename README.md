@@ -4,7 +4,7 @@ Projekt aplikacji bazodanowej w języku Python z wykorzystaniem biblioteki Tkint
 
 ## Opis projektu
 
-Aplikacja bazodanowa umożliwia dodawanie i zarządzanie rekordami w bazie danych SQLite. Zapewnia prosty interfejs użytkownika, który umożliwia wykonywanie operacji CRUD (Create, Read, Update, Delete) na tabelach bazy danych. Projekt składa się z dwóch głównych komponentów: modułu GUI (gui.py) oraz modułu obsługi bazy danych (database.py).
+Aplikacja bazodanowa umożliwia dodawanie i zarządzanie rekordami w bazie danych SQLite. Zapewnia prosty interfejs użytkownika, który umożliwia wykonywanie operacji CRUD (Create, Read, Update, Delete) na tabelach bazy danych.
 
 
 ## Instrukcje instalacji i uruchomienia
