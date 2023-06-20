@@ -19,7 +19,7 @@ Aplikacja bazodanowa umożliwia dodawanie i zarządzanie rekordami w bazie danyc
 - `program1.py`
 - `program2.py`
 - `baza_danych.db`
-- `README.md`:
+- `README.md`
 
 ## Dokumentacja
 
