@@ -1,32 +1,17 @@
 #Test dodawania rekordu
 import sqlite3
-from tkinter import *
 
-# Funkcja dodająca nowy rekord do bazy danych
-def dodaj_rekord():
-    conn = sqlite3.connect('baza_danych.db')
-    c = conn.cursor()
-    c.execute("INSERT INTO tabela1 (nazwa, cena) VALUES (?, ?)", (pole1.get(), pole2.get()))
-    conn.commit()
-    conn.close()
+# Utworzenie połączenia z bazą danych
+conn = sqlite3.connect('baza_danych.db')
+c = conn.cursor()
 
-# Test dodawania rekordu
-def test_dodawania_rekordu():
-    pole1.insert(0, "Nowy produkt")
-    pole2.insert(0, "99.99")
-    dodaj_rekord()
-    wyswietl_rekordy()
+# Dodanie nowego rekordu do tabela1
+c.execute("INSERT INTO tabela1 (nazwa, cena) VALUES ('Nowy produkt', 25.99)")
+conn.commit()
 
-# Tworzenie interfejsu użytkownika przy użyciu biblioteki Tkinter
-root = Tk()
+# Sprawdzenie czy rekord został dodany
+c.execute("SELECT * FROM tabela1 WHERE nazwa='Nowy produkt' AND cena=25.99")
+record_exists = c.fetchone() is not None
+assert record_exists, "Nowy rekord nie został dodany do tabela1."
 
-pole1 = Entry(root)
-pole1.pack()
-
-pole2 = Entry(root)
-pole2.pack()
-
-przycisk_dodaj = Button(root, text="Dodaj rekord", command=test_dodawania_rekordu)
-przycisk_dodaj.pack()
-
-root.mainloop()
+conn.close()
