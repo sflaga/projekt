@@ -16,10 +16,10 @@ Aplikacja bazodanowa umożliwia dodawanie i zarządzanie rekordami w bazie danyc
 
 ## Struktura projektu
 
-- `gui.py`: Moduł zawierający kod interfejsu użytkownika.
-- `database.py`: Moduł zawierający kod obsługi bazy danych.
-- `database.db`: Plik bazy danych SQLite.
-- `README.md`: Plik zawierający opis projektu, instrukcje instalacji i uruchomienia.
+- `program1.py`
+- `program2.py`
+- `baza_danych.db`
+- `README.md`:
 
 ## Dokumentacja
 
