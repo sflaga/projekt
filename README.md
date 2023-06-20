@@ -20,10 +20,11 @@ Aplikacja bazodanowa umożliwia dodawanie i zarządzanie rekordami w bazie danyc
 - `program2.py`
 - `baza_danych.db`
 - `README.md`
+- `testy/`
 
 ## Dokumentacja
 
-Więcej informacji na temat funkcjonalności aplikacji, struktury bazy danych, instrukcji użytkowania i innych szczegółów można znaleźć w [dokumentacji projektu](/project_documentation.pdf).
+Więcej informacji na temat funkcjonalności aplikacji, struktury bazy danych, instrukcji użytkowania i innych szczegółów można znaleźć w [dokumentacji projektu](/dokumentacja_projektu.pdf).
 
 ## Autor
 
